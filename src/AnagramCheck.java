@@ -1,10 +1,24 @@
+   import java.util.Arrays;
+import java.util.Scanner;
 public class AnagramCheck {
-   
-        // TODO: Read the two strings
-        // TODO: Convert both to lowercase (to handle case-insensitivity)
-        // TODO: Check if lengths are equal. If not, print "false" and return.
-        // TODO: Convert strings to char arrays
-        // TODO: Sort both char arrays
-        // TODO: Compare the sorted arrays. Print "true" if equal, else "false".
-  
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s1 = sc.nextLine().toLowerCase();
+        String s2 = sc.nextLine().toLowerCase();
+
+        char[] a1 = s1.toCharArray();
+        char[] a2 = s2.toCharArray();
+
+        Arrays.sort(a1);
+        Arrays.sort(a2);
+
+        if (Arrays.equals(a1, a2)) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+    }
 }
+  
+
